@@ -1,0 +1,75 @@
+.footer {
+    background-color: #2a2a2a;
+    color: #eee;
+}
+
+.footerContent {
+    background-color: #333;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.logoWrapper img {
+    width: 150px;
+    margin-bottom: 15px;
+    filter: drop-shadow(0px 0px 0px #C5A059) brightness(0) saturate(100%) invert(71%) sepia(21%) saturate(996%) keys(20deg);
+}
+
+.socialIcon {
+    width: 40px;
+    height: 40px;
+    background: #444;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: 0.3s ease;
+    color: #fff !important;
+}
+
+.socialIcon:hover {
+    background: var(--main-color, #406AB3);
+    transform: translateY(-5px);
+}
+
+.footerList {
+    list-style: none;
+    padding: 0;
+}
+
+.footerList li {
+    margin-bottom: 12px;
+    border-bottom: 1px solid #444;
+    padding-bottom: 8px;
+}
+
+.footerList li:last-child {
+    border-bottom: none;
+}
+
+.footerList a {
+    transition: 0.3s;
+    color: #bbb !important;
+    text-decoration: none;
+}
+
+.footerList a:hover {
+    color: var(--main-color, #406AB3) !important;
+    padding-left: 10px;
+}
+
+.contactIcon {
+    font-size: 24px;
+    color: var(--main-color, #406AB3);
+    margin-right: 15px;
+}
+
+:global([dir="rtl"]) .contactIcon {
+    margin-right: 0;
+    margin-left: 15px;
+}
+h5 {
+    color: var(--main-color, #406AB3);
+    font-weight: 700;
+    letter-spacing: 1px;
+}

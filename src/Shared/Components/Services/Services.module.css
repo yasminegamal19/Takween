@@ -1,0 +1,75 @@
+.servicesSection {
+    padding: 100px 0;
+    background-color: #0f0f0f;
+    color: #fff;
+}
+
+.subTitle {
+    color: #C5A059;
+    letter-spacing: 2px;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.mainTitle {
+    font-family: 'Playfair Display', serif;
+    font-size: 38px;
+    margin-bottom: 50px;
+}
+
+.serviceCard {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(197, 160, 89, 0.1);
+    padding: 40px 30px;
+    border-radius: 15px;
+    text-align: center;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+}
+
+.serviceCard:hover {
+    transform: translateY(-10px);
+    background: rgba(197, 160, 89, 0.05);
+    border-color: #C5A059;
+}
+
+.iconBox {
+    font-size: 40px;
+    color: #C5A059;
+    margin-bottom: 25px;
+    transition: 0.4s;
+}
+
+.serviceCard:hover .iconBox {
+    transform: scale(1.1);
+}
+
+.serviceCard h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.serviceCard p {
+    color: #888;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.hoverLine {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background: #C5A059;
+    transition: 0.4s;
+    transform: translateX(-50%);
+}
+
+.serviceCard:hover .hoverLine {
+    width: 100%;
+}

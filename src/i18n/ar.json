@@ -1,0 +1,23 @@
+{
+  "navbar": {
+    "home": "الرئيسية",
+    "about": "من نحن",
+    "services": "الخدمات",
+    "terms": "شروط الخدمة",
+    "privacy": "سياسة الخصوصية",
+    "contact": "تواصل معنا",
+    "language_ar": "العربية",
+    "language_en": "English"
+  },
+  "footer": {
+    "description": "نحن نصمم مواقع موثوقة، تطبيقات هاتف، وبرمجيات مخصصة بكود نظيف، حماية قوية، وبنية قابلة للتوسع — تُسلم في الموعد.",
+    "quickLinks": "روابط سريعة",
+    "ourServices": "خدماتنا",
+    "requestService": "طلب خدمة",
+    "privacy": "سياسة الخصوصية",
+    "terms": "شروط الخدمة",
+    "contactTitle": "الموقع",
+    "locationLabel": "العنوان",
+    "callLabel": "اتصل بنا"
+  }
+}

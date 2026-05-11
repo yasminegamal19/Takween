@@ -1,23 +1,47 @@
-import logo from './logo.svg';
 import './App.css';
-
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
+import 'bootstrap-icons/font/bootstrap-icons.css';
+import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
+import Navbar from './Shared/Components/Scroll/Navbar/Navbar';
+import Footer from './Shared/Components/Footer/Footer';
+import Hero from './Shared/Components/Hero/Hero';
+import Prouducts from './Shared/Components/Products/Prouducts';
+import Landing from './Shared/Components/Landing/Landing';
+import States from './Shared/Components/States/States';
+import Sensory from './Shared/Components/Sensory/Sensory';
+import Experience from './Shared/Components/Experience/Experience';
+import Audio from './Shared/Components/Audio/Audio';
+import AboutUs from './Shared/Components/AboutUs/AboutUs';
+import Services from './Shared/Components/Services/Services';
+import LiveGallery from './Shared/Components/LiveGallery/LiveGallery';
 function App() {
+
+   const {t, i18n } = useTranslation();
+  
+  useEffect(() => {
+    const isArabic = i18n.language === "ar";
+
+    document.documentElement.lang = isArabic ? "ar" : "en";
+    document.documentElement.dir = isArabic ? "rtl" : "ltr";
+
+    document.body.classList.toggle("lang-ar", isArabic);
+    document.body.classList.toggle("lang-en", !isArabic);
+  }, [i18n.language]);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <Navbar />
+    <Hero/>
+    <AboutUs />
+    <Services />
+    <Prouducts />
+    <Landing />
+    <States />
+    <Experience />
+    <LiveGallery />
+    <Footer />
     </div>
   );
 }

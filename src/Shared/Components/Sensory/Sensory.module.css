@@ -1,0 +1,88 @@
+.journeyWrapper {
+    background-color: #0a0a0a;
+    padding: 100px 0;
+    overflow: hidden;
+}
+
+.goldTitle {
+    color: #C5A059;
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+}
+
+.interactiveContainer {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.mainImg {
+    width: 100%;
+    border-radius: 10px;
+    filter: brightness(0.7);
+}
+
+.hotspot {
+    position: absolute;
+    cursor: pointer;
+}
+
+.p1 {
+    top: 20%;
+    left: 30%;
+}
+
+.p2 {
+    top: 50%;
+    right: 25%;
+}
+
+.p3 {
+    bottom: 30%;
+    left: 45%;
+}
+
+.pulse {
+    width: 20px;
+    height: 20px;
+    background: #C5A059;
+    border-radius: 50%;
+    box-shadow: 0 0 0 rgba(197, 160, 89, 0.4);
+    animation: pulseAnim 2s infinite;
+}
+
+.tooltip {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(197, 160, 89, 0.9);
+    color: #000;
+    padding: 8px 15px;
+    border-radius: 4px;
+    white-space: nowrap;
+    font-size: 13px;
+    font-weight: 700;
+    opacity: 0;
+    transition: 0.3s;
+    pointer-events: none;
+}
+
+.hotspot:hover .tooltip {
+    opacity: 1;
+    bottom: 40px;
+}
+
+@keyframes pulseAnim {
+    0% {
+        box-shadow: 0 0 0 0 rgba(197, 160, 89, 0.7);
+    }
+
+    70% {
+        box-shadow: 0 0 0 20px rgba(197, 160, 89, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(197, 160, 89, 0);
+    }
+}

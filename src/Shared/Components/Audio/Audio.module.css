@@ -1,0 +1,34 @@
+.playerWrapper {
+    background: linear-gradient(90deg, #1a1a1a 0%, #000 100%);
+    padding: 60px;
+    border-radius: 20px;
+    border: 1px solid #C5A059;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.waveform {
+    display: flex;
+    align-items: flex-end;
+    gap: 4px;
+    height: 50px;
+}
+
+.bar {
+    width: 4px;
+    background: #C5A059;
+    animation: pulse 1.2s infinite ease-in-out;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        height: 10px;
+    }
+
+    50% {
+        height: 40px;
+    }
+}

@@ -1,0 +1,130 @@
+
+.heroWrapper {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    color: #fff;
+    
+}
+
+.backgroundContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.bgImage {
+    object-fit: cover;
+    animation: kenBurns 40s ease-out infinite alternate;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.8) 100%);
+    z-index: 2;
+}
+
+.contentGroup {
+    position: relative;
+    z-index: 3;
+    transition: transform 0.1s ease-out;
+    max-width: 800px;
+}
+
+.signatureSeries {
+    font-size: 14px;
+    letter-spacing: 4px;
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 300;
+}
+
+.mainTitle {
+    font-size: 64px;
+    font-weight: 700;
+    color: #eee;
+    letter-spacing: 2px;
+}
+
+.description {
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.8;
+    max-width: 600px;
+}
+
+.btnAcquire {
+    background-color: transparent;
+    border: 1px solid var(--main-color);
+    color: var(--main-color) !important;
+    padding: 12px 30px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+
+    box-shadow: 0 0 10px rgba(197, 160, 89, 0.2);
+    animation: goldGlowPulse 4s infinite;
+}
+
+.btnAcquire:hover {
+    background-color: var(--main-color);
+    color: #1a1a1a !important;
+    box-shadow: 0 0 25px rgba(197, 160, 89, 0.6);
+}
+
+.btnDetails {
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: rgba(255, 255, 255, 0.7) !important;
+    padding: 12px 30px;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.btnDetails:hover {
+    border-color: #fff;
+    color: #fff !important;
+}
+
+
+@keyframes kenBurns {
+    from {
+        transform: scale(1.0);
+    }
+
+    to {
+        transform: scale(1.15);
+    }
+}
+
+@keyframes goldGlowPulse {
+
+    0%,
+    100% {
+        box-shadow: 0 0 10px rgba(197, 160, 89, 0.2);
+    }
+
+    50% {
+        box-shadow: 0 0 20px rgba(197, 160, 89, 0.4);
+    }
+}
+
+@media (max-width: 768px) {
+    .mainTitle {
+        font-size: 40px;
+    }
+
+    .description {
+        font-size: 16px;
+    }
+}
