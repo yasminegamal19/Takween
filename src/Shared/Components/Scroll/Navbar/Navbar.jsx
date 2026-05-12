@@ -4,13 +4,13 @@ import { useTranslation } from "react-i18next";
 import styles from "./Navbar.module.css";
 
 const NAV_LINKS = [
-  { id: "home", label: "navbar.home" },
-  { id: "about", label: "navbar.about" },
-  { id: "services", label: "navbar.services" },
-  { id: "categories", label: "navbar.categories" },
-  { id: "terms", label: "navbar.terms" },
-  { id: "privacy", label: "navbar.privacy" },
-  { id: "contact", label: "navbar.contact" },
+  { id: "home", label: "navbar.home", isPage: false },
+  { id: "about", label: "navbar.about", isPage: false },
+  { id: "services", label: "navbar.services", isPage: false },
+  { id: "categories", label: "navbar.categories", isPage: false },
+  { id: "terms", label: "navbar.terms", isPage: true, path: "/terms" },
+  { id: "privacy", label: "navbar.privacy", isPage: true, path: "/privacy" },
+  { id: "contact", label: "navbar.contact", isPage: false },
 ];
 
 const Navbar = () => {
@@ -34,13 +34,20 @@ const Navbar = () => {
     localStorage.setItem("lang", lang);
   }, [i18n.language]);
 
-  const handleAnchorClick = useCallback(
-    (e, id) => {
-      e.preventDefault();
+  const handleLinkClick = useCallback(
+    (e, link) => {
       setMenuOpen(false);
 
+      // إذا كان اللينك عبارة عن صفحة مستقلة (Terms / Privacy)
+      if (link.isPage) {
+        // لا نحتاج e.preventDefault هنا لأننا نريد الـ Link أن يعمل طبيعيًا
+        return;
+      }
+
+      // إذا كان سكشن داخلي (Anchor Scroll)
+      e.preventDefault();
       const scrollToElement = () => {
-        const element = document.getElementById(id);
+        const element = document.getElementById(link.id);
         if (element) {
           element.scrollIntoView({ behavior: "smooth", block: "start" });
         }
@@ -48,7 +55,7 @@ const Navbar = () => {
 
       if (location.pathname !== "/") {
         navigate("/");
-        setTimeout(scrollToElement, 100);
+        setTimeout(scrollToElement, 300); // زيادة الوقت قليلاً لضمان تحميل الصفحة الرئيسية
       } else {
         scrollToElement();
       }
@@ -63,7 +70,9 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`${styles.navbar} ${isSticky ? styles.sticky : ""} ${i18n.language === "ar" ? styles.langAr : styles.langEn}`}
+      className={`${styles.navbar} ${isSticky ? styles.sticky : ""} ${
+        i18n.language === "ar" ? styles.langAr : styles.langEn
+      }`}
     >
       <div className="container d-flex align-items-center justify-content-between">
         <Link
@@ -77,13 +86,13 @@ const Navbar = () => {
         <ul className={`${styles.navbarNav} ${styles.desktopNav}`}>
           {NAV_LINKS.map((link) => (
             <li key={link.id} className="nav-item">
-              <a
-                href={`#${link.id}`}
+              <Link
+                to={link.isPage ? link.path : `/#${link.id}`}
                 className={styles.navLink}
-                onClick={(e) => handleAnchorClick(e, link.id)}
+                onClick={(e) => handleLinkClick(e, link)}
               >
                 {t(link.label)}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
@@ -124,6 +133,7 @@ const Navbar = () => {
           </button>
         </div>
 
+        {/* Mobile Menu */}
         <div className={`${styles.mobileMenu} ${menuOpen ? styles.show : ""}`}>
           <button
             className={styles.closeMobileMenu}
@@ -134,12 +144,12 @@ const Navbar = () => {
           <ul className={styles.mobileNavList}>
             {NAV_LINKS.map((link) => (
               <li key={link.id}>
-                <a
-                  href={`#${link.id}`}
-                  onClick={(e) => handleAnchorClick(e, link.id)}
+                <Link
+                  to={link.isPage ? link.path : `/#${link.id}`}
+                  onClick={(e) => handleLinkClick(e, link)}
                 >
                   {t(link.label)}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>

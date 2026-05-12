@@ -1,0 +1,41 @@
+.legalWrapper {
+    background: radial-gradient(circle at center, #1a1a1a 0%, #050505 100%);
+    min-height: 100vh;
+    padding: 150px 0 80px;
+    color: #fff;
+}
+
+.legalTitle {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #C5A059;
+    margin-bottom: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.contentCard {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(197, 160, 89, 0.1);
+    border-radius: 30px;
+    padding: 50px;
+    line-height: 1.8;
+}
+
+.legalSection {
+    margin-bottom: 40px;
+}
+
+.legalSection h3 {
+    color: #C5A059;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.legalSection p {
+    color: #ccc;
+    font-size: 1.1rem;
+}

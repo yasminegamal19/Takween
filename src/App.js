@@ -16,6 +16,8 @@ import Services from './Shared/Components/Services/Services';
 import LiveGallery from './Shared/Components/LiveGallery/LiveGallery';
 import { Route, Routes } from 'react-router-dom';
 import ProductDetails from './Shared/Components/Products/ProductDetails/ProductDetails';
+import Terms from './Shared/Routes/Terms';
+import Privacy from './Shared/Routes/Privacy';
 function App() {
 
    const {i18n } = useTranslation();
@@ -52,6 +54,8 @@ function App() {
         />
 
         <Route path="/product/:id" element={<ProductDetails />} />
+        <Route path="/terms" element={<Terms />} />
+        <Route path="/privacy" element={<Privacy />} />
       </Routes>
 
       <Footer />
