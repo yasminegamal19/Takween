@@ -119,7 +119,7 @@ const Navbar = () => {
             className={styles.navbarToggler}
             onClick={() => setMenuOpen(true)}
           >
-            <span className="navbar-toggler-icon"></span>
+            <i className="bi bi-list"></i>
           </button>
         </div>
 

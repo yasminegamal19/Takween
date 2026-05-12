@@ -10,6 +10,7 @@ const Footer = () => {
 
   const handleFooterClick = (e, id) => {
     e.preventDefault();
+
     const scrollToElement = () => {
       const element = document.getElementById(id);
       if (element) element.scrollIntoView({ behavior: "smooth" });
@@ -23,8 +24,16 @@ const Footer = () => {
     }
   };
 
+  const socialLinks = ["facebook", "twitter-x", "instagram", "linkedin"];
+
+  const quickLinks = [
+    { id: "home", label: "navbar.home" },
+    { id: "services", label: "navbar.services" },
+    { id: "about", label: "navbar.about" },
+  ];
+
   return (
-    <footer className={styles.footer}>
+    <footer className={styles.footer} id="contact">
       <div className="container py-5">
         <div className={`${styles.footerContent} p-4 p-md-5`}>
           <div className="row g-4">
@@ -32,31 +41,23 @@ const Footer = () => {
               <div className={styles.logoWrapper}>
                 <img src="/logo.png" alt="Takween Logo" className="mb-3" />
               </div>
-              <p className="text-white-50">
-                {t(
-                  "footer.description",
-                  "We craft reliable websites and custom software with clean code and scalable architecture.",
-                )}
-              </p>
+
+              <p className="text-white-50">{t("footer.description")}</p>
+
               <div className="d-flex gap-3 mt-4">
-                {["facebook", "twitter-x", "instagram", "linkedin"].map(
-                  (social) => (
-                    <a key={social} href="#" className={styles.socialIcon}>
-                      <i className={`bi bi-${social}`}></i>
-                    </a>
-                  ),
-                )}
+                {socialLinks.map((social) => (
+                  <a key={social} href="#" className={styles.socialIcon}>
+                    <i className={`bi bi-${social}`}></i>
+                  </a>
+                ))}
               </div>
             </div>
 
             <div className="col-xl-3 col-lg-6 col-12">
               <h5 className="text-uppercase mb-4">{t("footer.quickLinks")}</h5>
+
               <ul className={styles.footerList}>
-                {[
-                  { id: "home", label: "navbar.home" },
-                  { id: "services", label: "navbar.services" },
-                  { id: "about", label: "navbar.about" },
-                ].map((link) => (
+                {quickLinks.map((link) => (
                   <li key={link.id}>
                     <a
                       href={`#${link.id}`}
@@ -71,12 +72,8 @@ const Footer = () => {
 
             <div className="col-xl-3 col-lg-6 col-12">
               <h5 className="text-uppercase mb-4">{t("footer.ourServices")}</h5>
+
               <ul className={styles.footerList}>
-                <li>
-                  <Link to="/request-service">
-                    {t("footer.requestService")}
-                  </Link>
-                </li>
                 <li>
                   <Link to="/privacy">{t("footer.privacy")}</Link>
                 </li>
@@ -90,8 +87,10 @@ const Footer = () => {
               <h5 className="text-uppercase mb-4">
                 {t("footer.contactTitle")}
               </h5>
+
               <div className="d-flex align-items-start mb-4">
                 <i className={`bi bi-geo-alt ${styles.contactIcon}`}></i>
+
                 <div>
                   <h6 className="mb-1 text-white">
                     {t("footer.locationLabel")}:
@@ -99,11 +98,13 @@ const Footer = () => {
                   <span className="text-white-50">Fisal, Giza, Egypt</span>
                 </div>
               </div>
+
               <div className="d-flex align-items-start">
                 <i className={`bi bi-telephone-fill ${styles.contactIcon}`}></i>
+
                 <div>
                   <h6 className="mb-1 text-white">{t("footer.callLabel")}:</h6>
-                  <span className="text-white-50">+201010595705</span>
+                  <span className="text-white-50">+20xxxxxxxx</span>
                 </div>
               </div>
             </div>

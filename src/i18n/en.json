@@ -9,16 +9,108 @@
     "language_ar": "Arabic",
     "language_en": "English"
   },
+  "hero": {
+    "signature": "Books • Podcasts • Live Radio",
+    "title": "TAKWEEN",
+    "description": "Discover inspiring books, immersive audiobooks, live radio shows, and meaningful podcasts — all in one modern platform designed for readers, listeners, and contemporary thinkers.",
+    "acquire": "Explore Books",
+    "details": "Start Listening"
+  },
+  "about": {
+    "subtitle": "Takween | تكوين",
+    "title": "Where Ink Meets Echo",
+    "description": "At TAKWEEN, we believe a book is more than printed pages — it is an experience to read, hear, and live. That’s why we brought together physical books, audiobooks, podcasts, and live radio into one modern cultural platform.",
+    "feature1Title": "Printed Legacy",
+    "feature1Desc": "A curated collection of books and premium editions crafted for readers and knowledge seekers.",
+    "feature2Title": "Audio Experiences",
+    "feature2Desc": "Enjoy immersive audiobooks, inspiring podcasts, and live radio anytime, anywhere.",
+    "button": "Discover Our World",
+    "since": "Since"
+  },
+  "services": {
+    "subtitle": "Our Services | خدماتنا",
+    "title": "Crafting Your Complete Cultural Experience",
+
+    "service1Title": "Printed Books",
+    "service1Desc": "Explore a rich collection of carefully curated physical books for readers and knowledge seekers.",
+
+    "service2Title": "Audio Library",
+    "service2Desc": "Enjoy immersive audiobooks and premium listening experiences narrated by inspiring voices.",
+
+    "service3Title": "Podcasts & Live Radio",
+    "service3Desc": "Join live sessions, discover inspiring podcasts, and stay connected with nonstop audio content anytime.",
+
+    "service4Title": "Secure Shopping",
+    "service4Desc": "Experience safe and seamless shopping with trusted service and high-quality content."
+  },
+  "products": {
+    "collection": "Featured Collection",
+    "discover": "Discover Books & Audio Experiences",
+
+    "tagFeatured": "Featured",
+    "tagAudio": "Audio",
+    "tagPodcast": "Podcast",
+
+    "bestSeller": "Best Seller",
+    "new": "New",
+    "trending": "Trending",
+    "popular": "Popular",
+
+    "book1": "The Alchemist",
+    "book2": "Land of Zicola",
+    "book3": "Takween Podcast",
+    "book4": "Letters from the Past"
+  },
+  "landing": {
+    "safeTitle": "SAFE",
+    "safeDesc": "Secure shopping experience with advanced protection and trusted transactions.",
+
+    "originalTitle": "ORIGINAL",
+    "originalDesc": "Curated books, audiobooks, and podcasts crafted for culture and knowledge lovers.",
+
+    "audioTitle": "AUDIO",
+    "audioDesc": "Enjoy live radio, podcasts, and immersive audiobooks anytime and anywhere.",
+
+    "radioTitle": "THE RADIO EXPERIENCE",
+    "radioDesc": "Listen to inspiring live shows and discover meaningful audio content while exploring our collection.",
+
+    "radioBtn": "Tune In Now"
+  },
+  "stats": {
+    "happyClients": "Readers & Listeners",
+    "artifacts": "Books & Audio Content",
+    "countries": "Countries Reached",
+    "satisfaction": "User Satisfaction"
+  },
+  "experience": {
+    "readTitle": "Read",
+    "readDesc": "Enjoy the timeless reading experience through a curated collection of premium physical books.",
+
+    "listenTitle": "Listen",
+    "listenDesc": "Immerse yourself in audiobooks and podcasts narrated by inspiring voices and creators.",
+
+    "watchTitle": "Discover",
+    "watchDesc": "Explore interactive content, live sessions, and a world of culture and contemporary thought."
+  },
+  "liveGallery": {
+    "title": "The Alchemy Experience",
+    "subtitle": "Witness the story… hear the legacy.",
+    "badge": "LIVE VIEW",
+    "visualTitle": "Visual Narrative",
+    "visualDesc": "Cinematic storytelling brought to life.",
+    "playing": "Now Playing: The Alchemist",
+    "narrator": "Narrated by Dr. Amira K. Hassan",
+    "note": "Try Radio Mode for an immersive storytelling experience."
+  },
   "footer": {
-    "description": "At Takween, we curate literary treasures that transcend paper. We blend ancient heritage with immersive audio and visual experiences, crafting a legacy that is read, heard, and lived.",
+    "description": "We build a unified cultural platform combining physical books, audiobooks, and podcasts for modern knowledge seekers.",
     "quickLinks": "Quick Links",
     "ourServices": "Our Services",
     "requestService": "Request Service",
     "privacy": "Privacy Policy",
-    "terms": "Terms of Service",
-    "contactTitle": "Location",
-    "locationLabel": "Address",
-    "callLabel": "Call Us",
-    "rights": "All Rights Reserved"
+    "terms": "Terms of Use",
+    "contactTitle": "Contact Us",
+    "locationLabel": "Location",
+    "callLabel": "Call Us"
   }
 }

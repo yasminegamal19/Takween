@@ -28,7 +28,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section ref={heroRef} className={styles.heroWrapper} id="hero-alchemist">
+    <section ref={heroRef} className={styles.heroWrapper} id="home">
       
       <div className={styles.backgroundContainer}>
         <img src="/splahin 3.jpg" alt="The Alchemist Book" className={styles.bgImage} />
@@ -38,29 +38,30 @@ const Hero = () => {
       <div className="container h-100 d-flex align-items-center justify-content-center">
         <div ref={textRef} className={`${styles.contentGroup} text-center`}>
           
-          <span className={`${styles.signatureSeries} text-uppercase mb-3 d-block`}>
-            {t("hero.signature", "The Signature Series")}
-          </span>
+         <span className={`${styles.signatureSeries} text-uppercase mb-3 d-block`}>
+  {t("hero.signature")}
+</span>
 
-          <h1 className={`${styles.mainTitle} mb-4`}>
-            {t("products.alchemist", "TAKWEEN")}
-          </h1>
+<h1 className={`${styles.mainTitle} mb-4`}>
+  {t("hero.title")}
+</h1>
 
-          <p className={`${styles.description} mx-auto mb-5 text-white-50`}>
-            {t("hero.alchemistDesc", "A sensory journey into the secrets of the ancients. Encased in midnight charcoal leather with hand-poured gold detailing, this artifact bridges the gap between ritual and modern luxury.")}
-          </p>
+<p className={`${styles.description} mx-auto mb-5 text-white-50`}>
+  {t("hero.description")}
+</p>
 
-          <div className="d-flex gap-4 justify-content-center">
-            <button className={`btn ${styles.btnAcquire} text-uppercase`}>
-              {t("hero.acquire", "Acquire Legacy")}
-            </button>
-            <button className={`btn ${styles.btnDetails} text-uppercase`}>
-              {t("hero.details", "View Details")}
-            </button>
+<div className="d-flex gap-4 justify-content-center">
+  <button className={`btn ${styles.btnAcquire} text-uppercase`}>
+    {t("hero.acquire")}
+  </button>
+
+  <button className={`btn ${styles.btnDetails} text-uppercase`}>
+    {t("hero.details")}
+  </button>
+</div>
           </div>
 
         </div>
-      </div>
     </section>
   );
 };

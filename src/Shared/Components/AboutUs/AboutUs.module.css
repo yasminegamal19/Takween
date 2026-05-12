@@ -75,6 +75,7 @@
 .featureItem h4 {
     font-size: 20px;
     margin-bottom: 5px;
+    text-align: start;
 }
 
 .featureItem p {
@@ -89,7 +90,7 @@
     padding: 12px 35px;
     font-weight: 600;
     transition: 0.3s;
-    margin-top: 20px;
+    margin: 20px 0;
 }
 
 .btnDiscovery:hover {

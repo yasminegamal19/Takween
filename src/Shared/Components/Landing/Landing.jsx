@@ -7,37 +7,36 @@ const Landing = () => {
 
   return (
     <div className={styles.wrapper}>
-     
       <section className={styles.valuesSection}>
         <div className="container">
           <div className="row text-center g-4">
             <div className="col-md-4">
               <div className={styles.valueCard}>
                 <i className="bi bi-shield-check"></i>
-                <h3>SAFE</h3>
-                <p>
-                  Advanced security in every transaction and product
-                  authenticity.
-                </p>
+
+                <h3>{t("landing.safeTitle")}</h3>
+
+                <p>{t("landing.safeDesc")}</p>
               </div>
             </div>
+
             <div className="col-md-4">
               <div className={styles.valueCard}>
-                <i className="bi bi-gem"></i>
-                <h3>ORIGINAL</h3>
-                <p>
-                  Hand-crafted artifacts that guarantee uniqueness and quality.
-                </p>
+                <i className="bi bi-book"></i>
+
+                <h3>{t("landing.originalTitle")}</h3>
+
+                <p>{t("landing.originalDesc")}</p>
               </div>
             </div>
+
             <div className="col-md-4">
               <div className={styles.valueCard}>
-                <i className="bi bi-hourglass-split"></i>
-                <h3>ANCIENT</h3>
-                <p>
-                  Bridging the gap between historical rituals and modern
-                  lifestyle.
-                </p>
+                <i className="bi bi-headphones"></i>
+
+                <h3>{t("landing.audioTitle")}</h3>
+
+                <p>{t("landing.audioDesc")}</p>
               </div>
             </div>
           </div>
@@ -50,11 +49,14 @@ const Landing = () => {
             <div className={styles.pulseDisk}>
               <i className="bi bi-broadcast"></i>
             </div>
-            <h2 className="mt-4">THE RADIO EXPERIENCE</h2>
-            <p className="text-white-50">
-              Listen to the echoes of the past while you explore our collection.
-            </p>
-            <button className={styles.btnListen}>Tune In Now</button>
+
+            <h2 className="mt-4">{t("landing.radioTitle")}</h2>
+
+            <p className="text-white-50">{t("landing.radioDesc")}</p>
+
+            <button className={styles.btnListen}>
+              {t("landing.radioBtn")}
+            </button>
           </div>
         </div>
       </section>

@@ -10,15 +10,13 @@ import Hero from './Shared/Components/Hero/Hero';
 import Prouducts from './Shared/Components/Products/Prouducts';
 import Landing from './Shared/Components/Landing/Landing';
 import States from './Shared/Components/States/States';
-import Sensory from './Shared/Components/Sensory/Sensory';
 import Experience from './Shared/Components/Experience/Experience';
-import Audio from './Shared/Components/Audio/Audio';
 import AboutUs from './Shared/Components/AboutUs/AboutUs';
 import Services from './Shared/Components/Services/Services';
 import LiveGallery from './Shared/Components/LiveGallery/LiveGallery';
 function App() {
 
-   const {t, i18n } = useTranslation();
+   const {i18n } = useTranslation();
   
   useEffect(() => {
     const isArabic = i18n.language === "ar";

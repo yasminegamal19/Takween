@@ -6,30 +6,27 @@ const AboutUs = () => {
   const { t } = useTranslation();
 
   return (
-    <section className={styles.aboutSection} id="about-us">
+    <section className={styles.aboutSection} id="about">
       <div className="container">
-        <div >
-          <span className={styles.subTitle}>تكوين | Takween</span>
-          <h2 className={styles.mainTitle}>حيث يلتقي الحبر بالصدى</h2>
+        <div>
+          <span className={styles.subTitle}>{t("about.subtitle")}</span>
+
+          <h2 className={styles.mainTitle}>{t("about.title")}</h2>
         </div>
+
         <div className="row align-items-center text-start">
           <div className="col-lg-6 ps-lg-5 text-start">
-            <p className={styles.description}>
-              في <strong>تكوين</strong>، نؤمن أن الكتاب ليس مجرد صفحات ورقية، بل
-              هو إرث حي يُقرأ، يُسمع، ويُعاش. انطلقنا بهدف إعادة صياغة التجربة
-              الأدبية لتناسب حواس القارئ المعاصر.
-            </p>
+            <p className={styles.description}>{t("about.description")}</p>
 
             <div className={styles.featuresList}>
               <div className={styles.featureItem}>
                 <div className={styles.featureIcon}>
                   <i className="bi bi-journal-richtext"></i>
                 </div>
+
                 <div>
-                  <h4>إرث ورقي </h4>
-                  <p>
-                    إصدارات فاخرة تحتفي بملمس الورق وجودة الطباعة التقليدية.
-                  </p>
+                  <h4>{t("about.feature1Title")}</h4>
+                  <p>{t("about.feature1Desc")}</p>
                 </div>
               </div>
 
@@ -37,22 +34,24 @@ const AboutUs = () => {
                 <div className={styles.featureIcon}>
                   <i className="bi bi-mic-fill"></i>
                 </div>
+
                 <div>
-                  <h4>صدى الخيميائي </h4>
-                  <p>تجارب سمعية غامرة تحول النصوص إلى رحلات صوتية ساحرة.</p>
+                  <h4>{t("about.feature2Title")}</h4>
+                  <p>{t("about.feature2Desc")}</p>
                 </div>
               </div>
             </div>
 
-            <button className={styles.btnDiscovery}>اكتشف عالمنا</button>
+            <button className={styles.btnDiscovery}>{t("about.button")}</button>
           </div>
 
           <div className="col-lg-6 mb-5 mb-lg-0 text-center">
             <div className={styles.imageWrapper}>
               <div className={styles.experienceBadge}>
-                <span>Since</span>
-                <strong>2006</strong>{" "}
+                <span>{t("about.since")}</span>
+                <strong>2006</strong>
               </div>
+
               <img
                 src="/Frame 10.png"
                 alt="Takween Legacy"
