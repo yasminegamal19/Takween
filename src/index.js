@@ -5,9 +5,11 @@ import App from './App';
 import "./i18n/i18n";
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from "react-router-dom";
+import ScrollToTop from './Shared/Components/ScrollToTop/ScrollToTop';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
+    <ScrollToTop />
     <React.StrictMode>
       <App />
     </React.StrictMode>
