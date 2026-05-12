@@ -1,0 +1,166 @@
+.detailsWrapper {
+    background: radial-gradient(circle at top right, #1a1a1a 0%, #050505 100%);
+    color: #fff;
+    padding: 100px 0;
+    min-height: 100vh;
+}
+.contentBox {
+    margin-top: 20px;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+}
+.specsGrid {
+    display: flex;
+    gap: 20px;
+    margin: 40px 0;
+}
+
+.specItem {
+    flex: 1;
+    background: linear-gradient(145deg, #111, #1a1a1a);
+    padding: 20px;
+    border-radius: 20px;
+    border-left: 3px solid #C5A059;
+    transition: 0.4s;
+}
+
+.specItem:hover {
+    transform: translateY(-5px);
+    background: #1a1a1a;
+    border-left-width: 6px;
+}
+
+.specItem span {
+    display: block;
+    font-size: 0.7rem;
+    color: #C5A059;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+
+.specItem p {
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 0;
+    color: #fff;
+}
+.imageCard {
+    position: relative;
+    border-radius: 30px;
+    overflow: hidden;
+    border: 1px solid rgba(197, 160, 89, 0.3);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), 0 0 20px rgba(197, 160, 89, 0.1);
+}
+
+.mainImage:hover {
+    transform: scale(1.05);
+}
+
+.mainImage {
+    width: 80%;
+    transition: transform 0.5s ease;
+    margin-bottom: 20px;
+}
+
+.categoryTag {
+    color: #C5A059;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 0.9rem;
+}
+.title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    background: linear-gradient(to right, #fff, #C5A059);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin: 10px 0;
+}
+
+.priceTag {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: #C5A059;
+    text-shadow: 0 0 15px rgba(197, 160, 89, 0.3);
+}
+
+.divider {
+    height: 1px;
+    background: linear-gradient(90deg, #C5A059, transparent);
+    margin: 30px 0;
+}
+
+.description {
+    line-height: 1.8;
+    color: #ccc;
+    font-size: 1.1rem;
+}
+
+.featuresList {
+    list-style: none;
+    padding: 0;
+    margin: 30px 0;
+}
+
+.featuresList li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    color: #eee;
+    font-size: 1.05rem;
+}
+
+.featuresList li::before {
+    content: "✓";
+    color: #C5A059;
+    font-weight: 900;
+    background: rgba(197, 160, 89, 0.1);
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+.btnPrimary {
+    background: linear-gradient(45deg, #C5A059, #e2c285);
+    border: none;
+    padding: 18px 45px;
+    color: #000;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(197, 160, 89, 0.2);
+}
+
+.btnGold {
+    background: linear-gradient(45deg, #C5A059, #e2c285);
+    border: none;
+    padding: 18px 45px;
+    color: #000;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(197, 160, 89, 0.2);
+    transition: 0.3s;
+    margin: 5px;
+}
+.btnOutline {
+    backdrop-filter: blur(5px);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 18px 45px;
+    color: #fff;
+    border-radius: 12px;
+    transition: 0.3s;
+    margin: 5px;
+}

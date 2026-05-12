@@ -30,6 +30,7 @@ const Footer = () => {
     { id: "home", label: "navbar.home" },
     { id: "services", label: "navbar.services" },
     { id: "about", label: "navbar.about" },
+    { id: "categories", label: "navbar.categories" },
   ];
 
   return (

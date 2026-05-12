@@ -93,7 +93,7 @@ const Products = () => {
   const { t } = useTranslation();
 
   return (
-    <section className={styles.swiperSection} id="featured-products">
+    <section className={styles.swiperSection} id="categories">
       <div className="container">
         <div className="text-center mb-5">
           <span className={styles.subTitle}>
@@ -105,6 +105,7 @@ const Products = () => {
         </div>
 
         <Swiper
+          dir="ltr"
           modules={[Navigation, Pagination, Autoplay]}
           spaceBetween={30}
           slidesPerView={1}

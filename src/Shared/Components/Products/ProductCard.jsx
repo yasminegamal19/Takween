@@ -1,12 +1,12 @@
 import { memo, useRef, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import styles from "./Products.module.css";
-
+import { useNavigate } from "react-router-dom";
 const ProductCard = ({ product }) => {
   const { t } = useTranslation();
   const cardRef = useRef(null);
   const imgRef = useRef(null);
-
+ const navigate = useNavigate();
   useEffect(() => {
     const card = cardRef.current;
     const img = imgRef.current;
@@ -69,7 +69,10 @@ const ProductCard = ({ product }) => {
           <span className={styles.rating}>{product.rating.toFixed(1)}</span>
         </div>
 
-        <button className={styles.btnExplore}>
+        <button
+          className={styles.btnExplore}
+          onClick={() => navigate(`/product/${product.id}`)}
+        >
           {t("products.explore", "Explore")}{" "}
           <i className="bi bi-arrow-right"></i>
         </button>

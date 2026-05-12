@@ -14,6 +14,8 @@ import Experience from './Shared/Components/Experience/Experience';
 import AboutUs from './Shared/Components/AboutUs/AboutUs';
 import Services from './Shared/Components/Services/Services';
 import LiveGallery from './Shared/Components/LiveGallery/LiveGallery';
+import { Route, Routes } from 'react-router-dom';
+import ProductDetails from './Shared/Components/Products/ProductDetails/ProductDetails';
 function App() {
 
    const {i18n } = useTranslation();
@@ -30,16 +32,29 @@ function App() {
 
   return (
     <div className="App">
-    <Navbar />
-    <Hero/>
-    <AboutUs />
-    <Services />
-    <Prouducts />
-    <Landing />
-    <States />
-    <Experience />
-    <LiveGallery />
-    <Footer />
+      <Navbar />
+
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <>
+              <Hero />
+              <AboutUs />
+              <Services />
+              <Prouducts />
+              <Landing />
+              <States />
+              <Experience />
+              <LiveGallery />
+            </>
+          }
+        />
+
+        <Route path="/product/:id" element={<ProductDetails />} />
+      </Routes>
+
+      <Footer />
     </div>
   );
 }
