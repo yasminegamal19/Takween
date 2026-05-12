@@ -49,8 +49,6 @@
     background: transparent;
     border: 1px solid #444;
     color: #888;
-    width: 45px;
-    height: 45px;
     border-radius: 50%;
     transition: 0.3s;
 }
@@ -170,9 +168,7 @@
     color: #1a1a1a;
 }
 
-:global([dir="rtl"]) .customPagination {
-    flex-direction: row-reverse;
-}
+
 .customPagination {
     width: 100%;
     display: flex;

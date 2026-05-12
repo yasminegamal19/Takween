@@ -6,11 +6,11 @@ body {
 }
 
 body.lang-en {
-font-family: 'Playfair Display', serif;
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
 }
 
 body.lang-ar {
-font-family: 'Playfair Display', serif;
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
 }
 
 code {
