@@ -38,13 +38,10 @@ const Navbar = () => {
     (e, link) => {
       setMenuOpen(false);
 
-      // إذا كان اللينك عبارة عن صفحة مستقلة (Terms / Privacy)
       if (link.isPage) {
-        // لا نحتاج e.preventDefault هنا لأننا نريد الـ Link أن يعمل طبيعيًا
         return;
       }
 
-      // إذا كان سكشن داخلي (Anchor Scroll)
       e.preventDefault();
       const scrollToElement = () => {
         const element = document.getElementById(link.id);
@@ -55,7 +52,7 @@ const Navbar = () => {
 
       if (location.pathname !== "/") {
         navigate("/");
-        setTimeout(scrollToElement, 300); // زيادة الوقت قليلاً لضمان تحميل الصفحة الرئيسية
+        setTimeout(scrollToElement, 300); 
       } else {
         scrollToElement();
       }
@@ -133,7 +130,6 @@ const Navbar = () => {
           </button>
         </div>
 
-        {/* Mobile Menu */}
         <div className={`${styles.mobileMenu} ${menuOpen ? styles.show : ""}`}>
           <button
             className={styles.closeMobileMenu}

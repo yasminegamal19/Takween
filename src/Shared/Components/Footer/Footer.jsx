@@ -84,7 +84,7 @@ const Footer = () => {
               </ul>
             </div>
 
-            <div className="col-xl-3 col-lg-6 col-12">
+            <div className="col-xl-3 col-lg-6 col-12 ">
               <h5 className="text-uppercase mb-4">
                 {t("footer.contactTitle")}
               </h5>
